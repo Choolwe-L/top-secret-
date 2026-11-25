@@ -1,0 +1,30 @@
+{
+  "authorization": {
+    "acknowledged": true,
+    "statement": "Authorized self-assessment of the local FitTrack lab (vulnerable_api) that I own. Week 5 coursework."
+  },
+  "scope": {
+    "allow_hosts": ["127.0.0.1", "localhost"],
+    "allow_cidrs": [],
+    "allow_ports": [5000],
+    "max_requests": 300,
+    "requests_per_second": 20
+  },
+  "target": {
+    "base_url": "http://127.0.0.1:5000"
+  },
+  "phases": ["recon", "authn", "authz", "impact"],
+  "ai": {
+    "provider": "rulebased",
+    "api_key_env": "OPENAI_API_KEY",
+    "endpoint": "https://api.openai.com/v1/chat/completions",
+    "model": "gpt-4o-mini"
+  },
+  "credentials": {
+    "test_user": { "username": "alice", "password": "Sunshine2024!" },
+    "spray_username": "admin",
+    "spray_passwords": ["letmein", "123456", "password", "admin", "qwerty"]
+  },
+  "audit_log": "audit.log.jsonl",
+  "report_path": "assessment_report.md"
+}

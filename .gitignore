@@ -1,0 +1,5 @@
+# build output
+/autopen
+# runtime artifacts
+*.jsonl
+assessment_report.md
